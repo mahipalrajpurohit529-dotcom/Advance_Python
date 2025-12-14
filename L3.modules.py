@@ -137,9 +137,118 @@ mat = a
     # and the changes made will be applied to both the variables/copies
 
 li=np.arange(1,13).reshape(3,4)
-print(li)
+# print(li)
 ab=li.ravel()       #syntax
 # remember that ravel also flattens the matrix
 
-print(ab)
-print(li)
+# print(ab)
+# print(li)
+
+
+
+
+
+
+
+
+# fancy indexing :-
+
+
+# arr = np.random.randint(1,11,10)
+
+# we want 1st ,4th and 5th element in a new array
+# normally we would make a new empty list 
+# then we run for i in [1,4,5]
+# then append them  to it 
+# then put it in array() finction
+
+
+# arr1=[]
+# for x in [1,4,5]:
+#     arr1.append(arr[x])
+# arr1=np.array(arr1)
+
+# but this is a long code and slow
+# so we use fancy indexing that lets us create a sub array from an array
+
+# fancy indexing is a technique in programming in numpy that allows us to select
+# multiple elements from an array at once and put it in a new sub array
+
+
+# arr1=arr[[1,4,5]]       # one line code 
+# print(arr1)         
+
+# here we only give the indices of the array that we want to use to make the sub array
+# also remember that we give it in list format
+
+
+
+
+
+
+
+
+
+
+
+# copies :-
+
+# there is another method called arrayname.view() that creates a copy
+# actually it copies the reference of the og array# so any changes made will reflect in the og array
+
+# arr = np.arange(1,11)   # creating array
+# print("og array before change :: ",arr)
+# arr2 =arr.view()    # creating view/copy
+# arr2[0]=100         # changing elements in the copy
+
+# print("og array after change :: ",arr)
+# print("copied aarray ::",arr2)
+
+
+
+
+# but view copy the reference 
+# what if we want a copy that doesnt affect the og array
+# we use .copy() functions 
+
+
+# arr = np.arange(1,11)   # creating array
+# print("og array before change :: ",arr)
+# arr2 =arr.copy()    # creating view/copy
+# arr2[1]=20         # changing elements in the copy
+
+# print("og array after change :: ",arr)          # OG array is retained 
+# print("copied aarry ::",arr2)
+
+
+
+
+
+
+
+
+
+
+# we have another function called where ()
+# this is used for conditional selection  and replacement of elements of numpy array
+
+a=np.arange(1,11)   
+x=np.where(a>4)     # makes an array of indexes of a which are greater that 4
+print(x)
+
+# x is an array of indices 
+# all the indices present in x are the indices of elements of a that are greater than 4
+
+
+
+
+# we can also change them :-
+y=np.where(a>4,'high','low')          # change the value of all satisfying the condition as high and remaing to low
+print(y)
+
+
+
+
+
+
+

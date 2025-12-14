@@ -173,6 +173,11 @@ import numpy as np
 
 
 
-# learnin assignment :-
-    # slicing on the matrices 
-    # vactorisation
+
+
+
+
+
+
+
+
